@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+.sidebar h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.role {
+    margin: 10px 0 30px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.sidebar nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin: 15px 0;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+    color: #00c6ff;
+}
+
+/* Main content */
+.content {
+    flex: 1;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Glass cards */
+.card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    padding: 25px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #00c6ff;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(0, 198, 255, 0.2);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #00c6ff;
+    color: #000;
+}
+
+/* Projects list */
+.card ul {
+    list-style: none;
+}
+
+.card ul li {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar nav a {
+        display: inline-block;
+        margin: 10px;
+    }
+}
